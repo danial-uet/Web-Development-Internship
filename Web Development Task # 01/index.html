@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Layout Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Outer Container/Border */
+        .container {
+            width: 800px;
+            margin: 30px auto;
+            border: 2px solid #000;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #fff;
+        }
+
+        /* 1. Top Red Bar (Header) */
+        header {
+            background-color: #ff3b30;
+            height: 60px;
+            border: 1px solid #000;
+        }
+
+        /* 2. Light Blue Bar (Nav) */
+        nav {
+            background-color: #00bcd4;
+            height: 60px;
+            border: 1px solid #000;
+        }
+
+        /* Middle Section containing Left Content & Right Sidebar */
+        .middle-content {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Main Left Column (Yellow & Orange Sections) */
+        main {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 3. Yellow Box (Main Content Top) */
+        section {
+            background-color: #ffb74d;
+            height: 120px;
+            border: 1px solid #000;
+        }
+
+        /* 4. Orange Box (Main Content Bottom) */
+        article {
+            background-color: #ff8a65;
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        /* 5. Pink Box (Right Sidebar) */
+        aside {
+            flex: 2;
+            background-color: #ff69b4;
+            border: 1px solid #000;
+        }
+
+        /* 6. Dark Grey Bottom Bar (Footer) */
+        footer {
+            background-color: #616161;
+            height: 65px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Red Top Header -->
+        <header></header>
+
+        <!-- 2. Light Blue Navigation -->
+        <nav></nav>
+
+        <!-- Middle Body Area -->
+        <div class="middle-content">
+            <!-- Left Side Area -->
+            <main>
+                <!-- 3. Yellow Section -->
+                <section></section>
+                
+                <!-- 4. Orange Article -->
+                <article></article>
+            </main>
+
+            <!-- 5. Pink Sidebar -->
+            <aside></aside>
+        </div>
+
+        <!-- 6. Grey Footer -->
+        <footer></footer>
+    </div>
+
+</body>
+</html>
