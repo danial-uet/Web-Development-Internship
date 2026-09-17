@@ -1,0 +1,379 @@
+/* --- CSS Variables --- */
+:root {
+  --bg-gradient-top: #e2e5e9;
+  --bg-gradient-mid: #eef0f3;
+  --bg-pure-white: #ffffff;
+  --text-primary: #1e1e1e;
+  --text-secondary: #777777;
+  --link-blue: #3b82f6;
+  --container-max-width: 1140px;
+}
+
+/* --- Reset & Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-pure-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Utility Layout Classes --- */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.content-left, .content-right {
+  flex: 1;
+}
+
+/* --- Section Typography --- */
+.section-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.section-description {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* --- App Store Buttons --- */
+.store-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-buttons img {
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.store-buttons img:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0px 12px 20px rgba(0, 0, 0, 0.12));
+}
+
+/* --- Global Shadow for Mobile Mockups --- */
+.mockup-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  filter: drop-shadow(20px 25px 35px rgba(0, 0, 0, 0.09));
+}
+
+
+/* 1. HERO SECTION */
+.hero-section {
+  position: relative;
+  padding: 90px 0 120px;
+  background: radial-gradient(ellipse at 50% 20%, #eff1f4 0%, #dedfe3 100%);
+  overflow: hidden;
+}
+
+.hero-wave-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-wave-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  max-width: 480px;
+}
+
+.hero-logo {
+  width: 270px;
+  margin-bottom: 24px;
+}
+
+.hero-tagline {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 34px;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* 2. CHANNELS SECTION */
+.channels-section {
+  position: relative;
+  padding: 60px 0 100px;
+  background-color: var(--bg-pure-white);
+}
+
+.channels-wave-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.channels-wave-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.channels-media {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* 3. MESSAGES SECTION */
+.messages-section {
+  position: relative;
+  padding: 80px 0 120px;
+  background-color: var(--bg-gradient-mid);
+}
+
+.messages-wave-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.messages-wave-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.messages-media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* 4. IN FUTURE SECTION */
+.future-section {
+  position: relative;
+  padding: 90px 0 100px;
+  background-color: var(--bg-pure-white);
+}
+
+.future-media {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.future-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Category Vector Icons Row placed directly above text */
+.future-vectors-wrap {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.vectors-img {
+  width: 100%;
+  opacity: 0.85;
+}
+
+
+/* 5. FOOTER */
+.site-footer {
+  position: relative;
+  padding: 70px 20px 50px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f5f8 100%);
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-download-label {
+  font-size: 1.05rem;
+  color: #444444;
+  margin-bottom: 22px;
+}
+
+.footer-buttons {
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-contact-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.contact-link {
+  color: var(--link-blue);
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Enlarged Peratude Logo */
+.peratude-brand {
+  margin-top: 10px;
+}
+
+.peratude-logo {
+  width: 48px; /* Prominent size */
+  opacity: 0.9;
+  margin: 0 auto;
+}
+
+
+/* 6. RESPONSIVE MEDIA QUERIES (Mobile & Tablet) */
+@media (max-width: 900px) {
+  .flex-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* Maintain Zig-Zag order correctly on Mobile */
+  .channels-section .flex-row {
+    flex-direction: column; /* Media top, Text bottom */
+  }
+
+  .messages-section .flex-row {
+    flex-direction: column-reverse; /* Media top, Text bottom */
+  }
+
+  .future-section .flex-row {
+    flex-direction: column; /* Media top, Text bottom */
+  }
+
+  .hero-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-media, .channels-media, .messages-media, .future-media {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-logo {
+    width: 220px;
+  }
+
+  .mockup-img {
+    max-width: 380px;
+  }
+
+  .future-vectors-wrap {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .store-buttons img {
+    height: 38px;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
+
+  .peratude-logo {
+    width: 40px;
+  }
+}
