@@ -1,15 +1,14 @@
-/* --- CSS Variables --- */
+/* ---------- Variables ---------- */
 :root {
-  --bg-gradient-top: #e2e5e9;
   --bg-gradient-mid: #eef0f3;
   --bg-pure-white: #ffffff;
   --text-primary: #1e1e1e;
   --text-secondary: #777777;
-  --link-blue: #3b82f6;
-  --container-max-width: 1140px;
+  --link-blue: #2b98f0;
+  --container-max-width: 1040px;
 }
 
-/* --- Reset & Global Styles --- */
+/* ---------- Reset & Base ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--text-primary);
   background-color: var(--bg-pure-white);
   line-height: 1.5;
@@ -39,7 +38,7 @@ a {
   color: inherit;
 }
 
-/* --- Utility Layout Classes --- */
+/* ---------- Layout ---------- */
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -55,147 +54,82 @@ a {
   gap: 50px;
 }
 
+.content-left,
+.content-right {
+  flex: 1;
+}
+
 .text-center {
   text-align: center;
 }
 
-.content-left, .content-right {
-  flex: 1;
+.section {
+  position: relative;
 }
 
-/* --- Section Typography --- */
+/* ---------- Typography ---------- */
 .section-title {
-  font-size: 1.65rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  padding-left: 0.22em;
+  line-height: 1.2;
   text-transform: uppercase;
   color: var(--text-primary);
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 
 .section-description {
-  font-size: 1.08rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-weight: 300;
+  line-height: 1.22;
   color: var(--text-secondary);
-  line-height: 1.65;
-  font-weight: 400;
 }
 
-/* --- App Store Buttons --- */
+/* ---------- Store Buttons ---------- */
 .store-buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
 }
 
 .store-buttons img {
-  height: 44px;
   width: auto;
-  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .store-buttons img:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 12px 20px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.12));
 }
 
-/* --- Global Shadow for Mobile Mockups --- */
+.hero-buttons {
+  gap: 16px;
+}
+
+.hero-buttons img {
+  height: 62px;
+}
+
+.footer-buttons {
+  gap: 14px;
+  margin-bottom: 46px;
+}
+
+.footer-buttons img {
+  height: 58px;
+}
+
+/* ---------- Mockups ---------- */
 .mockup-img {
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
   filter: drop-shadow(20px 25px 35px rgba(0, 0, 0, 0.09));
 }
 
-
-/* 1. HERO SECTION */
-.hero-section {
-  position: relative;
-  padding: 90px 0 120px;
-  background: radial-gradient(ellipse at 50% 20%, #eff1f4 0%, #dedfe3 100%);
-  overflow: hidden;
-}
-
-.hero-wave-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-wave-bg svg {
-  width: 100%;
-  height: 100%;
-}
-
-.hero-text {
-  max-width: 480px;
-}
-
-.hero-logo {
-  width: 270px;
-  margin-bottom: 24px;
-}
-
-.hero-tagline {
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin-bottom: 34px;
-}
-
-.hero-media {
-  display: flex;
-  justify-content: flex-end;
-}
-
-
-/* 2. CHANNELS SECTION */
-.channels-section {
-  position: relative;
-  padding: 60px 0 100px;
-  background-color: var(--bg-pure-white);
-}
-
-.channels-wave-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 160px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.channels-wave-bg svg {
-  width: 100%;
-  height: 100%;
-}
-
-.channels-media {
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-/* 3. MESSAGES SECTION */
-.messages-section {
-  position: relative;
-  padding: 80px 0 120px;
-  background-color: var(--bg-gradient-mid);
-}
-
+/* ---------- Wave Backgrounds ---------- */
+.hero-wave-bg,
+.channels-wave-bg,
 .messages-wave-bg {
   position: absolute;
   bottom: 0;
@@ -206,9 +140,89 @@ a {
   pointer-events: none;
 }
 
+.hero-wave-bg {
+  height: 180px;
+}
+
+.hero-wave-bg svg,
+.channels-wave-bg svg,
 .messages-wave-bg svg {
   width: 100%;
   height: 100%;
+}
+
+/* ---------- 1. Hero ---------- */
+.hero-section {
+  padding: 130px 0 90px;
+  background: radial-gradient(ellipse at 50% 20%, #eff1f4 0%, #dedfe3 100%);
+  overflow: hidden;
+}
+
+.hero-logo {
+  width: 255px;
+  margin: 0 auto 30px;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2.1vw, 1.375rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  padding-left: 0.2em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: #555555;
+  margin-bottom: 60px;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-media .mockup-img {
+  max-width: 470px;
+}
+
+/* ---------- 2. Channels ---------- */
+.channels-section {
+  padding: 50px 0 40px;
+}
+
+.single-line {
+  white-space: nowrap; /* Guarantees this phrase stays strictly on one line */
+}
+
+.channels-media {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.channels-media .mockup-img {
+  max-width: 400px;
+  margin-right: auto;
+}
+
+.channels-text {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+/* ---------- 3. Messages ---------- */
+.messages-section {
+  padding: 30px 0 60px;
+  background-color: var(--bg-gradient-mid);
 }
 
 .messages-media {
@@ -216,12 +230,22 @@ a {
   justify-content: flex-end;
 }
 
+.messages-media .mockup-img {
+  max-width: 440px;
+  margin-left: auto;
+}
 
-/* 4. IN FUTURE SECTION */
+.messages-text {
+  padding-top: 70px;
+}
+
+.messages-text .section-title {
+  margin-bottom: 18px;
+}
+
+/* ---------- 4. In Future ---------- */
 .future-section {
-  position: relative;
-  padding: 90px 0 100px;
-  background-color: var(--bg-pure-white);
+  padding: 45px 0 40px;
 }
 
 .future-media {
@@ -229,17 +253,28 @@ a {
   justify-content: flex-start;
 }
 
+.future-media .mockup-img {
+  max-width: 430px;
+  margin-right: auto;
+}
+
 .future-text-block {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 140px;
 }
 
-/* Category Vector Icons Row placed directly above text */
+.future-text-block .section-title {
+  margin-bottom: 32px;
+}
+
 .future-vectors-wrap {
-  width: 100%;
-  max-width: 420px;
-  margin-bottom: 30px;
+  position: relative;
+  left: -11%;
+  width: 112%;
+  max-width: 540px;
+  margin-bottom: 50px;
 }
 
 .vectors-img {
@@ -247,13 +282,27 @@ a {
   opacity: 0.85;
 }
 
+/* Curved grey gradient at the bottom of the section */
+.future-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 24vw;
+  min-height: 180px;
+  max-height: 420px;
+  z-index: 1;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23dfe1e5'/%3E%3Cstop offset='0.55' stop-color='%23eceef1'/%3E%3Cstop offset='1' stop-color='%23f5f6f8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M0,285 C320,315 820,240 1440,35 L1440,320 L0,320 Z'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+  filter: drop-shadow(0 -8px 12px rgba(0, 0, 0, 0.05));
+}
 
-/* 5. FOOTER */
+/* ---------- 5. Footer ---------- */
 .site-footer {
   position: relative;
-  padding: 70px 20px 50px;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f5f8 100%);
-  border-top: 1px solid #eaeaea;
+  padding: 65px 20px 40px;
+  background: linear-gradient(180deg, #f5f6f8 0%, #f8f9fa 45%, #eef0f3 100%);
 }
 
 .footer-container {
@@ -263,44 +312,36 @@ a {
 }
 
 .footer-download-label {
-  font-size: 1.05rem;
-  color: #444444;
-  margin-bottom: 22px;
-}
-
-.footer-buttons {
-  justify-content: center;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #222222;
+  margin-bottom: 26px;
 }
 
 .footer-contact-text {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #222222;
+  margin-bottom: 46px;
 }
 
 .contact-link {
   color: var(--link-blue);
-  font-weight: 600;
 }
 
 .contact-link:hover {
   text-decoration: underline;
 }
 
-/* Enlarged Peratude Logo */
-.peratude-brand {
-  margin-top: 10px;
-}
-
 .peratude-logo {
-  width: 48px; /* Prominent size */
+  width: 68px;
   opacity: 0.9;
   margin: 0 auto;
 }
 
-
-/* 6. RESPONSIVE MEDIA QUERIES (Mobile & Tablet) */
+/* ---------- Tablet & Mobile ---------- */
 @media (max-width: 900px) {
   .flex-row {
     flex-direction: column;
@@ -308,55 +349,94 @@ a {
     gap: 40px;
   }
 
-  /* Maintain Zig-Zag order correctly on Mobile */
-  .channels-section .flex-row {
-    flex-direction: column; /* Media top, Text bottom */
-  }
-
   .messages-section .flex-row {
-    flex-direction: column-reverse; /* Media top, Text bottom */
+    flex-direction: column-reverse;
   }
 
-  .future-section .flex-row {
-    flex-direction: column; /* Media top, Text bottom */
+  .hero-section {
+    padding: 70px 0 80px;
+  }
+
+  .channels-section,
+  .messages-section,
+  .future-section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .channels-text,
+  .messages-text,
+  .future-text-block {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .hero-text {
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .hero-media, .channels-media, .messages-media, .future-media {
+  .hero-media,
+  .channels-media,
+  .messages-media,
+  .future-media {
     justify-content: center;
     width: 100%;
   }
 
-  .store-buttons {
-    justify-content: center;
+  .section .mockup-img {
+    margin: 0 auto;
   }
 
   .section-title {
     font-size: 1.4rem;
     letter-spacing: 0.2em;
+    padding-left: 0.2em;
   }
 
-  .hero-tagline {
-    font-size: 1.15rem;
-    letter-spacing: 0.14em;
+  .section-description {
+    font-size: 1.25rem;
   }
 
   .hero-logo {
     width: 220px;
   }
 
-  .mockup-img {
-    max-width: 380px;
+  .hero-tagline {
+    font-size: 1.15rem;
+    letter-spacing: 0.14em;
+    padding-left: 0.14em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 36px;
+  }
+
+  .hero-buttons img,
+  .footer-buttons img {
+    height: 50px;
   }
 
   .future-vectors-wrap {
+    left: 0;
+    width: 100%;
     max-width: 340px;
+    margin-bottom: 30px;
+  }
+
+  .future-section::after {
+    height: 40vw;
+    min-height: 140px;
+  }
+
+  .footer-download-label {
+    font-size: 1.25rem;
+  }
+
+  .footer-contact-text {
+    font-size: 1.05rem;
   }
 }
 
@@ -365,15 +445,24 @@ a {
     padding: 0 20px;
   }
 
-  .store-buttons img {
-    height: 38px;
-  }
-
   .hero-logo {
     width: 180px;
   }
 
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons img,
+  .footer-buttons img {
+    height: 40px;
+  }
+
   .peratude-logo {
-    width: 40px;
+    width: 56px;
   }
 }
