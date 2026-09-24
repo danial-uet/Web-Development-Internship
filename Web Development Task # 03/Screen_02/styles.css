@@ -1,0 +1,283 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header-block {
+  width: 100%;
+  padding: 40px 60px 100px;
+  background-color: #881c24;
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), calc(100% - 110px) 100%, 0 100%);
+}
+
+.header-logo {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.main-title {
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sub-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+.description-text p {
+  max-width: 1050px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Awards */
+.awards-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 60px 40px;
+}
+
+.award-category {
+  margin-bottom: 60px;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.category-triangle {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.category-title {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.clubs-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.club-item {
+  flex: 1;
+  text-align: center;
+}
+
+.club-badge {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 14px;
+  object-fit: contain;
+  display: block;
+}
+
+.club-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+  color: #881c24;
+}
+
+.club-sub {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+  color: #000000;
+}
+
+/* Footer */
+.footer-block {
+  width: 100%;
+  margin-top: 30px;
+  padding: 60px 60px 90px;
+  background-color: #881c24;
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), calc(100% - 100px) 100%, 0 100%);
+}
+
+.footer-title {
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .header-block {
+    padding: 35px 40px 70px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 70px) 100%, 0 100%);
+  }
+
+  .main-title {
+    font-size: 48px;
+  }
+
+  .sub-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .description-text p {
+    font-size: 14px;
+  }
+
+  .awards-container {
+    padding: 40px 40px 20px;
+  }
+
+  .category-title {
+    font-size: 32px;
+  }
+
+  .club-badge {
+    width: 85px;
+    height: 85px;
+  }
+
+  .club-name, .club-sub {
+    font-size: 13px;
+  }
+
+  .footer-block {
+    padding: 45px 40px 70px;
+  }
+
+  .footer-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header-block {
+    padding: 25px 20px 50px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 50px) 100%, 0 100%);
+  }
+
+  .header-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .description-text p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .awards-container {
+    padding: 30px 20px 10px;
+  }
+
+  .award-category {
+    margin-bottom: 40px;
+  }
+
+  .category-header {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .category-triangle {
+    width: 22px;
+    height: 22px;
+  }
+
+  .category-title {
+    font-size: 24px;
+  }
+
+  /* 3 items per row */
+  .clubs-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 10px;
+  }
+
+  .club-item {
+    flex: 0 0 calc(33.333% - 10px);
+  }
+
+  .club-badge {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 8px;
+  }
+
+  .club-name, .club-sub {
+    font-size: 11px;
+  }
+
+  .footer-block {
+    padding: 35px 20px 55px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 50px) 100%, 0 100%);
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+}
+
+/* 2 items per row */
+@media screen and (max-width: 400px) {
+  .club-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
