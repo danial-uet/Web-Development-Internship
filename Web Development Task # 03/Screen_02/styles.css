@@ -67,7 +67,8 @@ html, body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 60px 40px;
+  /* Ensures padding is at least enough for the triangle icon + gap */
+  padding: 50px 60px 40px max(60px, 46px + 0px);
 }
 
 .award-category {
@@ -79,12 +80,14 @@ html, body {
   align-items: center;
   gap: 16px;
   margin-bottom: 30px;
+  margin-left: -60px; /* Triangle (30px) + Gap (16px) */
 }
 
 .category-triangle {
   width: 30px;
   height: 30px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .category-title {
@@ -171,7 +174,7 @@ html, body {
   }
 
   .awards-container {
-    padding: 40px 40px 20px;
+    padding: 40px 40px 20px max(40px, 46px + 10px);
   }
 
   .category-title {
@@ -223,7 +226,8 @@ html, body {
   }
 
   .awards-container {
-    padding: 30px 20px 10px;
+    /* Guarantees 10px safety space from screen boundary while preserving alignment */
+    padding: 30px 20px 10px max(20px, 32px + 10px);
   }
 
   .award-category {
@@ -233,6 +237,7 @@ html, body {
   .category-header {
     gap: 10px;
     margin-bottom: 20px;
+    margin-left: -32px; /* Triangle (22px) + Gap (10px) */
   }
 
   .category-triangle {
