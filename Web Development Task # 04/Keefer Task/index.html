@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keefer Law Firm PLC</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+
+        <a href="#" class="logo-link">
+          <!-- left/right fillers repeat the logo's own background so no grey is left around it -->
+          <span class="logo-fill logo-fill-left" aria-hidden="true"></span>
+          <img src="logo.png" alt="Keefer Law Firm PLC" class="site-logo">
+          <span class="logo-fill logo-fill-right" aria-hidden="true"></span>
+        </a>
+
+        <!-- White contact section -->
+        <div class="contact-box">
+          <span class="call-title">CALL OUR OFFICES NOW!</span>
+          <a href="tel:5404336906" class="phone-number">540.433.6906</a>
+          <span class="call-subtitle">Get Your Questions Answered Fast</span>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- RED NAV RIBBON -->
+    <nav class="main-nav" id="mainNav">
+
+      <!-- Hamburger icon (mobile only) -->
+      <button type="button" class="menu-toggle" id="menuToggle"
+              aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <img src="responsive_menu_icon.png" alt="" class="menu-icon">
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item active-home"><a href="#">HOME</a></li>
+        <li class="nav-item"><a href="#">BIOGRAPHY</a></li>
+        <li class="nav-item"><a href="#">BLOG</a></li>
+        <li class="nav-item"><a href="#">AREAS WE SERVE</a></li>
+        <li class="nav-item"><a href="#">LIBRARY</a></li>
+        <li class="nav-item"><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <main class="hero-section">
+
+      <div class="hero-banner-box">
+        <img src="gurantee_banner.png" alt="30 Years of Experience Banner" class="hero-banner-img">
+      </div>
+
+      <aside class="hero-form-box">
+
+        <div class="widget-header">
+          <span class="badge-questions">QUESTIONS?</span>
+          <div class="title-group">
+            <div class="title-line1">Have a <span class="title-blue">Question</span></div>
+            <div class="title-line2">About Your Case?</div>
+          </div>
+        </div>
+
+        <div class="form-body">
+          <p class="form-instruction">
+            Enter your information and get your questions answered quickly and discreetly or call us at: <strong>540.433.6906</strong>
+          </p>
+
+          <form class="case-form">
+
+            <div class="form-main-fields">
+              <div class="inputs-col">
+                <div class="form-row">
+                  <label for="name">NAME:</label>
+                  <input type="text" id="name" name="name">
+                </div>
+                <div class="form-row">
+                  <label for="email">EMAIL:</label>
+                  <input type="email" id="email" name="email">
+                </div>
+                <div class="form-row">
+                  <label for="phone">PHONE:</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+              </div>
+
+              <div class="stamp-col">
+                <img src="confidential.png" alt="CONFIDENTIAL" class="confidential-stamp">
+              </div>
+            </div>
+
+            <div class="textarea-row">
+              <textarea name="case_details" placeholder="Tell us about your case here..."></textarea>
+            </div>
+
+            <div class="form-footer">
+              <span class="privacy-text">100% Privacy Guaranteed</span>
+              <button type="submit" class="submit-btn">
+                Ask Us About Your Case <span class="btn-arrow">&#9658;</span>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </aside>
+
+    </main>
+
+  </div>
+
+  <script>
+    // Hamburger menu toggle (mobile)
+    (function () {
+      var nav = document.getElementById('mainNav');
+      var btn = document.getElementById('menuToggle');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+
+<!-- INFO SECTION -->
+<section class="info-section">
+
+  <div class="info-grid">
+
+    <!-- COLUMN 1 : CHARGED WITH DUI-->
+    <div class="info-col info-col-dui">
+
+      <div class="info-row">
+        <div class="info-text">
+          <h2 class="info-title">CHARGED WITH <span class="red">DUI?</span></h2>
+          <h3 class="info-subtitle">FREE CASE EVALUATION</h3>
+          <p>Being charged with a DUI can be scary. Get the help you deserve.</p>
+          <p>Click here to let us know how we can help you with your case.</p>
+        </div>
+        <img src="paste_board.png" alt="Free case evaluation" class="info-pic info-pic-clipboard">
+      </div>
+
+      <div class="info-cta">
+        <a href="#" class="info-btn">CLICK HERE <img src="bullet_white.png" alt="" class="info-btn-arrow"></a>
+      </div>
+
+    </div>
+
+    <!-- COLUMN 2 : LAW BLOG + CASE RESULTS -->
+    <div class="info-col info-col-stack">
+
+      <!-- Law Blog -->
+      <div class="info-block">
+        <div class="info-row">
+          <div class="info-text">
+            <h2 class="info-title">LAW <span class="red">BLOG</span></h2>
+            <p>Learn more about Virginia Traffic Laws.</p>
+          </div>
+          <img src="pic1.png" alt="Keefer Law Firm blog" class="info-pic info-pic-laptop">
+        </div>
+        <div class="info-cta">
+          <a href="#" class="info-btn">CLICK HERE <img src="bullet_white.png" alt="" class="info-btn-arrow"></a>
+        </div>
+      </div>
+
+      <!-- Case Results -->
+      <div class="info-block info-block-second">
+        <div class="info-row">
+          <div class="info-text">
+            <h2 class="info-title">CASE <span class="red">RESULTS</span></h2>
+            <p>See how we help our clients. Read our latest case results.</p>
+          </div>
+          <img src="order_icon.png" alt="Case results" class="info-pic info-pic-book">
+        </div>
+        <div class="info-cta">
+          <a href="#" class="info-btn">CLICK HERE <img src="bullet_white.png" alt="" class="info-btn-arrow"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMN 3 : CERTIFICATES & CREDENTIALS -->
+    <div class="info-col info-col-cert">
+
+      <div class="info-badges">
+        <img src="avo_rating_large.png" alt="Avvo Rating 10 Superb" class="info-badge">
+        <img src="national_college_large.png" alt="National College for DUI Defense General Member" class="info-badge">
+      </div>
+
+      <h2 class="info-title">CERTIFICATES &amp;<br><span class="red">CREDENTIALS</span></h2>
+      <p>Keefer Law Firm has protected the rights of Virginians for over 30 years.</p>
+
+      <div class="info-cta">
+        <a href="#" class="info-btn">LEARN MORE <img src="bullet_white.png" alt="" class="info-btn-arrow"></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- thin soft grey gradient line where the section ends -->
+  <div class="info-end-line"></div>
+
+</section>
+
+<!-- MAIN CONTENT SECTION -->
+<section class="main-section">
+
+  <div class="main-grid">
+
+    <!-- LEFT : PRACTICE AREAS -->
+    <aside class="side-left">
+
+      <h2 class="side-title">PRACTICE <span class="red">AREAS</span></h2>
+
+      <ul class="area-list">
+        <li>
+          <a href="#" class="area-btn">
+            <span class="area-name">DUI &amp; DWI</span>
+            <span class="area-more">LEARN MORE <img src="bullet_red.png" alt="" class="area-arrow"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="area-btn">
+            <span class="area-name">RECKLESS DRIVING</span>
+            <span class="area-more">LEARN MORE <img src="bullet_red.png" alt="" class="area-arrow"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="area-btn">
+            <span class="area-name">SPEEDING TICKETS</span>
+            <span class="area-more">LEARN MORE <img src="bullet_red.png" alt="" class="area-arrow"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="area-btn">
+            <span class="area-name">TRAFFIC VIOLATIONS</span>
+            <span class="area-more">LEARN MORE <img src="bullet_red.png" alt="" class="area-arrow"></span>
+          </a>
+        </li>
+      </ul>
+
+      <h2 class="side-title learn-title">LEARN <span class="red">MORE</span> ABOUT</h2>
+
+      <div class="menu-area">MENU<br>AREA<br>HERE</div>
+
+    </aside>
+
+    <!-- CENTER: PAGE CONTENT -->
+    <article class="content-col">
+      <h1 class="page-title">&lt;H1&gt;PAGE TITLE HERE&lt;/H1&gt;</h1>
+      <p>Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Aser velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum.</p>
+    </article>
+
+    <!-- RIGHT: CALLS TO ACTION -->
+    <aside class="side-right">
+
+      <div class="cta-box">
+        <h3 class="cta-title">CLIENT<br><span class="red">TESTIMONIALS</span></h3>
+        <p>Read what others say about Keefer Law Firm.</p>
+        <div class="mini-cta"><a href="#" class="mini-btn">CLICK HERE <img src="bullet_white.png" alt="" class="mini-arrow"></a></div>
+      </div>
+
+      <div class="cta-box">
+        <h3 class="cta-title">DOWNLOAD<br><span class="red">FREE</span> REPORTS</h3>
+        <p>Discover the truth about Virginia Law.</p>
+        <div class="mini-cta"><a href="#" class="mini-btn">CLICK HERE <img src="bullet_white.png" alt="" class="mini-arrow"></a></div>
+      </div>
+
+      <div class="cta-box">
+        <h3 class="cta-title">CONTACT <span class="red">OUR</span><br>OFFICES</h3>
+        <p>Get your questions answered right now.</p>
+        <div class="mini-cta"><a href="#" class="mini-btn">CLICK HERE <img src="bullet_white.png" alt="" class="mini-arrow"></a></div>
+      </div>
+
+      <div class="side-badges">
+        <img src="avo_rating_large.png" alt="Avvo Rating 10 Superb" class="badge-avvo">
+        <img src="national_college_large.png" alt="National College for DUI Defense General Member" class="badge-ncdd">
+      </div>
+
+      <div class="follow-box">
+        <h3 class="cta-title follow-title">FOLLOW <span class="red">US</span></h3>
+        <div class="social-row">
+          <a href="#"><img src="fb_icon.png" alt="Facebook"></a>
+          <a href="#"><img src="google_icon.png" alt="Google+"></a>
+          <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+          <a href="#"><img src="linked_icon.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- dark red bar where the footer starts -->
+  <div class="main-bottom-bar"></div>
+
+</section>
+
+</body>
+</html>
