@@ -24,23 +24,18 @@ JavaScript (ES6+): Modular event handling, array methods (filter, sort, reduce),
 🚀 Getting Started
 
 Prerequisites
-
 You need a modern web browser (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge) to run this application.
 
 Installation
-
 Clone the repository:
-
 git clone https://github.com/danial-uet/Web-Development-Internship/tree/main/Task%20Manager%20App
 
 Run the app:
-
 Simply open index.html in your web browser.
 
 Alternatively, open the folder in VS Code and run it using the Live Server extension.
 
 📁 Project Structure
-
 student-task-manager/
 │
 ├── index.html     # Application structure and layout
