@@ -1,1 +1,49 @@
+🎓 Student Task Manager
 
+A feature-rich, interactive web application built with vanilla JavaScript, HTML5, and CSS3. 
+Designed specifically for students to manage homework, assignments, exam schedules, and personal goals efficiently.
+
+✨ Features
+
+➕ Task Creation: Add tasks with custom titles, categories, priorities, and due dates.
+📊 Live Dashboard Statistics: Dynamic counters displaying Total, Completed, and Pending tasks in real-time.
+🏷️ Categorization & Priorities: Tag items by category (Homework, Assignment, Exam, Personal) and assign priority levels (High, Medium, Low).
+🚨 Overdue Task Highlighting: Automatic identification and visual highlighting of tasks past their due dates.
+🔍 Search & Filter: Search tasks by name, filter by status (All, Completed, Pending), and sort by priority or due date.
+🖐️ Drag-and-Drop Reordering: Intuitive HTML5 drag-and-drop mechanics to manually reorder tasks.
+💾 Data Persistence: Integrated localStorage ensures your tasks and theme preference persist across browser sessions.
+🌙 Dark Mode: Built-in theme switcher supporting light and dark modes with custom CSS variables.
+✏️ Edit & Delete: Update task details or remove completed tasks seamlessly.
+
+🛠️ Built With
+
+HTML5: Semantic document structure and native Drag & Drop API.
+CSS3: Custom properties (CSS variables), Flexbox, and modern UI transitions.
+JavaScript (ES6+): Modular event handling, array methods (filter, sort, reduce), and Web Storage API (localStorage).
+
+🚀 Getting Started
+
+Prerequisites
+
+You need a modern web browser (e.g., Google Chrome, Mozilla Firefox, Microsoft Edge) to run this application.
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/danial-uet/Web-Development-Internship/tree/main/Task%20Manager%20App
+
+Run the app:
+
+Simply open index.html in your web browser.
+
+Alternatively, open the folder in VS Code and run it using the Live Server extension.
+
+📁 Project Structure
+
+student-task-manager/
+│
+├── index.html     # Application structure and layout
+├── style.css      # Custom styling, responsive design, and dark theme
+├── script.js      # Main application logic, state management, and DOM handling
+└── README.md      # Project documentation
