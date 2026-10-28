@@ -93,7 +93,7 @@ function renderTasks() {
         <small style="margin-left:8px; opacity:0.8;">📅 ${task.dueDate} ${isOverdue ? '⚠️ OVERDUE' : ''}</small>
       </div>
       <div class="task-actions">
-        <button class="edit-btn">✏️</button>
+        ${!task.completed ? '<button class="edit-btn">✏️</button>' : ''}
         <button class="delete-btn">🗑️</button>
       </div>
     `;
@@ -101,7 +101,11 @@ function renderTasks() {
     // Event Handlers for Item Controls
     li.querySelector('.toggle-check').addEventListener('change', () => toggleTask(task.id));
     li.querySelector('.delete-btn').addEventListener('click', () => deleteTask(task.id));
-    li.querySelector('.edit-btn').addEventListener('click', () => editTask(task.id));
+    
+    const editBtn = li.querySelector('.edit-btn');
+    if (editBtn) {
+      editBtn.addEventListener('click', () => editTask(task.id));
+    }
 
     // Drag and Drop Listeners
     addDragListeners(li);
@@ -123,6 +127,11 @@ function deleteTask(id) {
 
 function editTask(id) {
   const task = tasks.find(t => t.id === id);
+  
+  if (task.completed) {
+    return;
+  }
+
   const newTitle = prompt('Edit Task Name:', task.title);
   if (newTitle !== null && newTitle.trim() !== '') {
     task.title = newTitle.trim();
